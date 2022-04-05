@@ -36,6 +36,8 @@
             this.textMsg = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.textStatus = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textPort
@@ -57,9 +59,9 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(25, 55);
+            this.btnStart.Location = new System.Drawing.Point(191, 55);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(372, 25);
+            this.btnStart.Size = new System.Drawing.Size(206, 25);
             this.btnStart.TabIndex = 7;
             this.btnStart.Text = "Connect";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -103,18 +105,36 @@
             // textStatus
             // 
             this.textStatus.Enabled = false;
-            this.textStatus.Location = new System.Drawing.Point(-5, -4);
+            this.textStatus.Location = new System.Drawing.Point(25, 136);
             this.textStatus.Multiline = true;
             this.textStatus.Name = "textStatus";
-            this.textStatus.Size = new System.Drawing.Size(10, 10);
+            this.textStatus.Size = new System.Drawing.Size(372, 72);
             this.textStatus.TabIndex = 12;
             this.textStatus.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textName
+            // 
+            this.textName.Location = new System.Drawing.Point(73, 58);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(112, 20);
+            this.textName.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Name";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 138);
+            this.ClientSize = new System.Drawing.Size(432, 233);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textName);
             this.Controls.Add(this.textStatus);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.textMsg);
@@ -141,6 +161,8 @@
         private System.Windows.Forms.TextBox textMsg;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox textStatus;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.Label label3;
     }
 }
 
