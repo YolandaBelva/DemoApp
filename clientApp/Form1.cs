@@ -43,13 +43,13 @@ namespace clientApp
         {
             textStatus.Invoke((MethodInvoker)delegate ()
             {
-                textStatus.Text += e.MessageString;
+                textStatus.Text += e.MessageString + Environment.NewLine;
             });
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            client.WriteLineAndGetReply(textMsg.Text, TimeSpan.FromSeconds(1));
+            client.WriteLineAndGetReply(textName.Text + ": " + textMsg.Text, TimeSpan.FromSeconds(1));
         }
     }
 }

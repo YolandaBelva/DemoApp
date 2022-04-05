@@ -37,14 +37,14 @@ namespace app
         {
             textStatus.Invoke((MethodInvoker)delegate ()
             {
-                textStatus.Text += e.MessageString;
-                e.ReplyLine(string.Format("You Said: {0}", e.MessageString));
+                textStatus.Text += e.MessageString+Environment.NewLine;
+                e.ReplyLine(string.Format("{0}", e.MessageString));
             });
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            textStatus.Text += "Server Starting...";
+            textStatus.Text += "Server Starting..."+ Environment.NewLine;
             System.Net.IPAddress ip = System.Net.IPAddress.Parse(textHost.Text);
             server.Start(ip, Convert.ToInt32(textPort.Text));
         }
